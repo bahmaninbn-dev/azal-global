@@ -4,7 +4,7 @@ export default function Home()
   name: "AZAL Premium T-Shirt",
   price: "$29",
   image: "https://images.unsplash.com/photo-152097..."
-}
+},
       id: 2,
       name: "AZAL Hoodie Black",
       price: "$59",
@@ -21,8 +21,8 @@ export default function Home()
       name: "AZAL Women Collection",
       price: "$39",
       image: "https://images.unsplash.com/photo-1520975922323-9c2bcb1b9a65"
-    }
-  ];
+    },
+  ],
 
   return (
     <main style={{fontFamily:"Arial"}}>
