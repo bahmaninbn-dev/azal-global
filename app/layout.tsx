@@ -1,4 +1,4 @@
-export default function Home() 
+export default function Home() ,
     {{
   id: 1,
   name: "AZAL Premium T-Shirt",
@@ -22,7 +22,7 @@ export default function Home()
       price: "$39",
       image: "https://images.unsplash.com/photo-1520975922323-9c2bcb1b9a65"
     },
-  ],
+  
 
   return (
     <main style={{fontFamily:"Arial"}}>
