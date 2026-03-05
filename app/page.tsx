@@ -23,7 +23,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       price: "$39",
       image: "https://images.unsplash.com/photo-1520975661595-6453be3f7070"
     },
-  ],
 
   return (
     <main style={{fontFamily:"Arial",padding:"20px"}}>
