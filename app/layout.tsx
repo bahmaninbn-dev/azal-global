@@ -3,7 +3,7 @@ export default function Home() {
   const products = [
     {
       id: 1,
-      name: "AZAL Premium T-Shirt",
+      name: "AZAL , Premium T-Shirt",
       price: "$29",
       image: "https://images.unsplash.com/photo-1520975954732-35dd22299614"
     },
