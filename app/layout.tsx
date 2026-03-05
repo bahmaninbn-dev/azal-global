@@ -1,76 +1,105 @@
-import "./globals.css";
+export default function Home() {
 
-export const metadata = {
-  title: "Azal Store",
-  description: "Premium Fashion Inspired by Global Trends",
-};
+  const products = [
+    {
+      id: 1,
+      name: "AZAL Premium T-Shirt",
+      price: "$29",
+      image: "https://images.unsplash.com/photo-1520975954732-35dd22299614"
+    },
+    {
+      id: 2,
+      name: "AZAL Hoodie Black",
+      price: "$59",
+      image: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b"
+    },
+    {
+      id: 3,
+      name: "AZAL Cap Classic",
+      price: "$19",
+      image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f"
+    },
+    {
+      id: 4,
+      name: "AZAL Women Collection",
+      price: "$39",
+      image: "https://images.unsplash.com/photo-1520975922323-9c2bcb1b9a65"
+    }
+  ];
 
-export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
+    <main style={{fontFamily:"Arial"}}>
 
-        {/* Header */}
-        <header style={{
-          display:"flex",
-          justifyContent:"space-between",
-          alignItems:"center",
-          padding:"15px 30px",
-          background:"#000",
-          color:"#fff"
+      {/* HERO */}
+      <div style={{
+        background:"linear-gradient(90deg, black, #444)",
+        color:"white",
+        padding:"80px 20px",
+        textAlign:"center"
+      }}>
+        <h1>Welcome to AZAL Store</h1>
+        <p>Premium Fashion Inspired by Global Trends</p>
+        <button style={{
+          marginTop:"20px",
+          padding:"12px 25px",
+          background:"white",
+          border:"none",
+          fontWeight:"bold"
         }}>
-          
-          <h1 style={{fontWeight:"700",letterSpacing:"2px"}}>AZAL</h1>
+          Shop Now
+        </button>
+      </div>
 
-          <input
-            placeholder="Search products..."
-            style={{
-              padding:"8px",
-              width:"40%",
-              borderRadius:"5px",
-              border:"none"
-            }}
-          />
+      {/* PRODUCTS */}
+      <div style={{padding:"40px"}}>
 
-          <div style={{display:"flex",gap:"20px",fontSize:"20px"}}>
-            🌍
-            👤
-            ❤️
-            🛒
-          </div>
+        <h2 style={{textAlign:"center", marginBottom:"40px"}}>
+          Featured Products
+        </h2>
 
-        </header>
-
-        {children}
-
-        {/* Footer */}
-        <footer style={{
-          marginTop:"50px",
-          background:"#111",
-          color:"#fff",
-          padding:"30px",
-          textAlign:"center"
+        <div style={{
+          display:"grid",
+          gridTemplateColumns:"repeat(auto-fit,minmax(250px,1fr))",
+          gap:"30px"
         }}>
-          
-          <h2>Azal Store</h2>
 
-          <p>Premium Fashion Inspired by Global Trends</p>
+          {products.map((p) => (
+            <div key={p.id} style={{
+              background:"#f5f5f5",
+              padding:"20px",
+              borderRadius:"10px",
+              textAlign:"center"
+            }}>
 
-          <p>
-          Contact: azalstore@email.com
-          </p>
+              <img
+                src={p.image}
+                style={{
+                  width:"100%",
+                  borderRadius:"10px",
+                  marginBottom:"15px"
+                }}
+              />
 
-          <div style={{marginTop:"15px",fontSize:"24px"}}>
-          💳 Visa | Mastercard | PayPal | Cash on Delivery
-          </div>
+              <h3>{p.name}</h3>
 
-          <p style={{marginTop:"20px"}}>
-          © 2026 Azal Global
-          </p>
+              <p style={{fontWeight:"bold"}}>{p.price}</p>
 
-        </footer>
+              <button style={{
+                background:"black",
+                color:"white",
+                padding:"10px 20px",
+                border:"none"
+              }}>
+                Add to Cart
+              </button>
 
-      </body>
-    </html>
-  );
+            </div>
+          ))}
+
+        </div>
+
+      </div>
+
+    </main>
+  )
 }
