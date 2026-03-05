@@ -1,10 +1,10 @@
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-    {
+    {{
       id: 1,
       name: "AZAL Premium T-Shirt",
       price: "$29",
       image: "https://images.unsplash.com/photo-1520975954732-35dd22d0d6f9"
-    }
+    },
     {
       id: 2,
       name: "AZAL Black Hoodie",
@@ -22,8 +22,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       name: "AZAL Women Collection",
       price: "$39",
       image: "https://images.unsplash.com/photo-1520975661595-6453be3f7070"
-    }
-  ];
+    },
+  ],
 
   return (
     <main style={{fontFamily:"Arial",padding:"20px"}}>
