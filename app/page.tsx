@@ -1,5 +1,4 @@
-export default function Home() {
-  const products = [
+export default function RootLayout({ children }: { children: React.ReactNode }) {
     {
       id: 1,
       name: "AZAL Premium T-Shirt",
