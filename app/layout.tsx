@@ -4,7 +4,7 @@ export default function Home()
   name: "AZAL Premium T-Shirt",
   price: "$29",
   image: "https://images.unsplash.com/photo-152097..."
-},
+}
       id: 2,
       name: "AZAL Hoodie Black",
       price: "$59",
